@@ -6,7 +6,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Test
-        run: echo ${{ github.ref }}
-      - name: Test
-        run: echo ${{ github }}
+      - run: echo ${{ github.ref }}
+      - run: echo ${{ github.event }}
+      - run: echo ${{ github.actor }}
+      - run: echo ${{ github.event_name }}
+      - run: echo ${{ github.head_ref }}
+      - run: echo ${{ github.base_ref }}
+      - run: echo ${{ runner.os }}
+      - run: echo ${{ toJSON(github) }}
+      - run: echo ${{ toJSON(runner) }}
+      - run: echo ${{ toJSON(job) }}
