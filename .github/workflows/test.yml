@@ -1,0 +1,12 @@
+name: Run tests
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: echo ${{ github.ref }}
+      - name: Test
+        run: echo ${{ github }}
