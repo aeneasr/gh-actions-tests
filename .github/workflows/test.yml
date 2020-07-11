@@ -3,17 +3,40 @@ on:
   push:
   pull_request:
 jobs:
-  test:
+  a:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ github.ref }}
-      - run: echo ${{ github.event }}
-      - run: echo ${{ github.actor }}
-      - run: echo ${{ github.event_name }}
-      - run: echo ${{ github.head_ref }}
-      - run: echo ${{ github.base_ref }}
-      - run: echo ${{ runner.os }}
-      - name: as JSON
+      -
+        run: echo ${{ github.ref }}
+  c:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        run: echo ${{ github.ref }}
+  d:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        run: echo ${{ github.ref }}
+  b:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        run: echo ${{ github.ref }}
+      -
+        run: echo ${{ github.event }}
+      -
+        run: echo ${{ github.actor }}
+      -
+        run: echo ${{ github.event_name }}
+      -
+        run: echo ${{ github.head_ref }}
+      -
+        run: echo ${{ github.base_ref }}
+      -
+        run: echo ${{ runner.os }}
+      -
+        name: as JSON
         run: |
           echo '${{ toJSON(job) }}'
           echo "-----"
