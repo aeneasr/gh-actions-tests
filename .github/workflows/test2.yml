@@ -1,9 +1,10 @@
-name: Run tests2
+name: Run tests
 on:
   push:
   pull_request:
 jobs:
-  job1:
+  job2:
+    needs: job1
     runs-on: ubuntu-latest
     steps:
       -
