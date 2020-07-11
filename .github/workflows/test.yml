@@ -15,8 +15,8 @@ jobs:
       - run: echo ${{ runner.os }}
       - name: as JSON
         run: |
-          echo "${{ toJSON(job) }}"
+          echo '${{ toJSON(job) }}'
           echo "-----"
-          echo "${{ toJSON(github) }}"
+          echo '${{ toJSON(github) }}'
           echo "-----"
-          echo "${{ toJSON(runner) }}"
+          echo '${{ toJSON(runner) }}'
