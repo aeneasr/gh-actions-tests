@@ -2,7 +2,19 @@ name: Run release
 on:
   release:
 jobs:
-  test:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.ref }}
+  c:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.ref }}
+  d:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.ref }}
+  b:
     runs-on: ubuntu-latest
     steps:
       - run: echo ${{ github.ref }}
