@@ -8,3 +8,11 @@ jobs:
     steps:
       -
         run: echo ${{ github.ref }}
+
+  release:
+    runs-on: ubuntu-latest
+    if: ${{ startsWith(github.ref, '/refs/tags/') }}
+    steps:
+      -
+        name: Checkout code
+        uses: actions/checkout@v2
